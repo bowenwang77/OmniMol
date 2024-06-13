@@ -1,0 +1,16 @@
+{
+    "prop1": {
+        "regression": false,
+        "task_idx": 0,
+        "cls_num": 2,
+        "task_mean": 0.125,
+        "task_std": 1.0
+    },
+    "prop2": {
+        "regression": true,
+        "task_idx": 1,
+        "cls_num": 1,
+        "task_mean": 0.3,
+        "task_std": 0.3964124835860459
+    }
+}
