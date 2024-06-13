@@ -50,24 +50,32 @@ Ensure your molecule-property data is in LMDB format. You can reference the stru
 If you have additional details about the supergroup of the task, such as "Toxicity" in ADMET prediction for the task "Ames Toxicity", include these details in the property definition as shown below:
 ```json
 {
-    "prop1": {
+    "CYP2C19-inh": {
         "regression": false,
-        "task_idx": 0,
+        "task_idx": 8,
         "cls_num": 2,
-        "task_mean": 0.125,
-        "task_std": 1.0,
-        "prop": "Toxicity",
-        "prop_id": 5
+        "task_mean": 0.4550738916256158,
+        "task_std": 1,
+        "prop":"Metabolism",
+		"prop_id":3
     },
-    "prop2": {
+    "prop1": {
         "regression": false,
         "task_idx": 1,
         "cls_num": 2,
-        "task_mean": 0.2,
+        "task_mean": 0.125,
         "task_std": 1.0
+    },
+    "prop2": {
+        "regression": true,
+        "task_idx": 2,
+        "cls_num": 1,
+        "task_mean": 0.3,
+        "task_std": 0.3964124835860459
     }
 }
 ```
+For reproducing the result on CYP2C19-inh, please replace the content in meta_dict.json with the above script.
 
 ## Training
 To start training, run the following command:
@@ -85,13 +93,21 @@ fairseq-train --user-dir ./graphormer example/lmdb --mixing-dataset --valid-subs
 We provide a pretrained model for evaluating the performance of our approach on ADMET prediction tasks. You can download the pretrained model checkpoint file checkpoint_OmniMol_ADMET.pt from the following OneDrive link:
 [Download Pretrained Model "checkpoint_OmniMol_ADMET.pt"](https://mycuhk-my.sharepoint.com/:u:/g/personal/1155156871_link_cuhk_edu_hk/Ee8rTDta3E9Gm8aSXquqZDUBiuYPc3T_P0JN-fV_SC-xcQ?e=vjPemY)
 
-To evaluate the performance of our pretrained model on ADMET prediction, use the following command:
+To evaluate the performance of our pretrained model on your own ADMET prediction, use the following command:
 
 ```bash
-fairseq-train --user-dir ./graphormer [your/directory/to/the/ADMET/lmdb/folder] --mixing-dataset --valid-subset test_id --best-checkpoint-metric R2_acc_mean --maximize-best-checkpoint-metric --num-workers 0 --task dft_md_combine --criterion mae_dft_md --arch IEFormer_ep_pp_dft_md --optimizer adam --adam-betas 0.9,0.98 --adam-eps 1e-6 --clip-norm 2 --lr-scheduler polynomial_decay --lr 0 --warmup-updates 5000 --total-num-update 1 --batch-size 8 --dropout 0.0 --attention-dropout 0.1 --weight-decay 0.001 --update-freq 4 --seed 1 --wandb-project DRFormer_ADMET --embed-dim 768 --ffn-embed-dim 768 --attention-heads 48 --max-update 1 --log-interval 100 --log-format simple --save-interval 2 --validate-interval-updates 1 --keep-interval-updates 20 --save-dir ./checkpoints/ADMET_eval --layers 12 --blocks 4 --required-batch-size-multiple 1 --node-loss-weight 1 --use-fit-sphere --use-shift-proj --edge-loss-weight 1 --sphere-pass-origin --use-unnormed-node-label --noisy-nodes --noisy-nodes-rate 1.0 --noise-scale 0.2 --noise-type normal --noise-in-traj --noisy-node-weight 1 --SAA-idx 0 --explicit-pos --pos-update-freq 6 --drop-or-add --cls-weight 1 --deform-tail --mix-reg-cls --neg-inf-before-softmax --readout-attention --moe 8 --task-dict-dir ./meta_dict3.json --moe-in-backbone --ddp-backend legacy_ddp --drop-tail --task-type-num 90 --use-meta --data-balance 0.2 --restore-file [your/directory/to/our/pretrained/model]/checkpoint_OmniMol_ADMET.pt --reset-dataloader --reset-lr-scheduler --reset-optimizer --reset-meters --distributed-world-size 1 --device-id 0
+fairseq-train --user-dir ./graphormer [your/directory/to/the/ADMET/lmdb/folder] --mixing-dataset --valid-subset test_id --best-checkpoint-metric R2_acc_mean --maximize-best-checkpoint-metric --num-workers 0 --task dft_md_combine --criterion mae_dft_md --arch IEFormer_ep_pp_dft_md --optimizer adam --adam-betas 0.9,0.98 --adam-eps 1e-6 --clip-norm 2 --lr-scheduler polynomial_decay --lr 0 --warmup-updates 5000 --total-num-update 1 --batch-size 8 --dropout 0.0 --attention-dropout 0.1 --weight-decay 0.001 --update-freq 4 --seed 1 --wandb-project DRFormer_ADMET --embed-dim 768 --ffn-embed-dim 768 --attention-heads 48 --max-update 1 --log-interval 100 --log-format simple --save-interval 2 --validate-interval-updates 1 --keep-interval-updates 20 --save-dir ./checkpoints/ADMET_eval --layers 12 --blocks 4 --required-batch-size-multiple 1 --node-loss-weight 1 --use-fit-sphere --use-shift-proj --edge-loss-weight 1 --sphere-pass-origin --use-unnormed-node-label --noisy-nodes --noisy-nodes-rate 1.0 --noise-scale 0.2 --noise-type normal --noise-in-traj --noisy-node-weight 1 --SAA-idx 0 --explicit-pos --pos-update-freq 6 --drop-or-add --cls-weight 1 --deform-tail --mix-reg-cls --neg-inf-before-softmax --readout-attention --moe 8 --task-dict-dir ./meta_dict.json --moe-in-backbone --ddp-backend legacy_ddp --drop-tail --task-type-num 90 --use-meta --data-balance 0.2 --restore-file [your/directory/to/our/pretrained/model]/checkpoint_OmniMol_ADMET.pt --reset-dataloader --reset-lr-scheduler --reset-optimizer --reset-meters --distributed-world-size 1 --device-id 0
 ```
 
 Replace path/to/ADMET/lmdb/folder with the directory path where your ADMET dataset in LMDB format is located.
+
+For example, you can try on our example dataset `CYP2C19-inh` with the following command:
+
+```bash
+fairseq-train --user-dir ./graphormer example/lmdb --mixing-dataset --valid-subset test_id --best-checkpoint-metric R2_acc_mean --maximize-best-checkpoint-metric --num-workers 0 --task dft_md_combine --criterion mae_dft_md --arch IEFormer_ep_pp_dft_md --optimizer adam --adam-betas 0.9,0.98 --adam-eps 1e-6 --clip-norm 2 --lr-scheduler polynomial_decay --lr 0 --warmup-updates 5000 --total-num-update 1 --batch-size 8 --dropout 0.0 --attention-dropout 0.1 --weight-decay 0.001 --update-freq 4 --seed 1 --wandb-project DRFormer_ADMET --embed-dim 768 --ffn-embed-dim 768 --attention-heads 48 --max-update 1 --log-interval 100 --log-format simple --save-interval 2 --validate-interval-updates 1 --keep-interval-updates 20 --save-dir ./checkpoints/ADMET_eval --layers 12 --blocks 4 --required-batch-size-multiple 1 --node-loss-weight 1 --use-fit-sphere --use-shift-proj --edge-loss-weight 1 --sphere-pass-origin --use-unnormed-node-label --noisy-nodes --noisy-nodes-rate 1.0 --noise-scale 0.2 --noise-type normal --noise-in-traj --noisy-node-weight 1 --SAA-idx 0 --explicit-pos --pos-update-freq 6 --drop-or-add --cls-weight 1 --deform-tail --mix-reg-cls --neg-inf-before-softmax --readout-attention --moe 8 --task-dict-dir ./meta_dict.json --moe-in-backbone --ddp-backend legacy_ddp --drop-tail --task-type-num 90 --use-meta --data-balance 0.2 --restore-file [your/directory/to/our/pretrained/model]/checkpoint_OmniMol_ADMET.pt --reset-dataloader --reset-lr-scheduler --reset-optimizer --reset-meters --distributed-world-size 1 --device-id 0
+```
+
+
 
 ## Finetuning
 If further finetuning for better ADMET prediction performance is needed for better performance, please refer to `ADMET_FT_cls.sh` and `ADMET_FT_reg.sh` for specific scripts designed for finetuning the model. Make sure to adjust the scripts accordingly to fit your dataset directory and training requirements.

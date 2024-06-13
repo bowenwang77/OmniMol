@@ -11,7 +11,7 @@ data = data[torch.logical_and(label!=1, label!=2)]
 label = label[torch.logical_and(label!=1, label!=2)]
 
 
-with open("./meta_dict3.json", 'r') as file:
+with open("./meta_dict.json", 'r') as file:
     task_dict = json.load(file)
 
 #DK for unkown type
