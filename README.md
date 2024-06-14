@@ -17,7 +17,7 @@ Set up the conda environment by following the detailed instructions provided on 
 - Replace `~/research/env/OmniMol/lib/python3.9/site-packages/fairseq` with `fairseq_mods/fairseq`.
 
 ### Compressed Conda Environment
-Alternatively, you can download a pre-configured conda environment using the link below (password: OmniMol2024):
+Alternatively, a more efficient way is to download a pre-configured conda environment using the link below (password: OmniMol2024):
 
 [Download Environment](https://mycuhk-my.sharepoint.com/:u:/g/personal/1155156871_link_cuhk_edu_hk/Eaj5wfpTb_JFsFB-t6BsyXgBIu1pA84aUDVVzA0Tv0k62Q?e=nHeZeu)
 
@@ -28,7 +28,12 @@ tar -xzvf [directory/to/]DRLabel_ADMET_20240131.tar -C my_env
 source my_env/bin/activate
 ```
 
+It normally takes no more than 30 minutes for environment setting up.
+
 This environment setup has been tested and is successful on NVIDIA GPUs like TitanX, A40, A100, V100. For NVIDIA 4090, follow the error messages to update the pyg packages as needed.
+
+### Conda environment result
+To ensure reproducibility and facilitate the setup process, we have provided a detailed list of the packages used in our conda environment, along with their respective versions and build information. This information can be found in the `OmniMol_env.txt` file, which serves as a reference for users who wish to recreate the exact environment used in our experiments.
 
 ## Data Preparation
 
@@ -108,7 +113,7 @@ Example: to demonstrate the functionality of our pretrained model, we provide an
 fairseq-train --user-dir ./graphormer example/lmdb --mixing-dataset --valid-subset test_id --best-checkpoint-metric R2_acc_mean --maximize-best-checkpoint-metric --num-workers 0 --task dft_md_combine --criterion mae_dft_md --arch IEFormer_ep_pp_dft_md --optimizer adam --adam-betas 0.9,0.98 --adam-eps 1e-6 --clip-norm 2 --lr-scheduler polynomial_decay --lr 0 --warmup-updates 5000 --total-num-update 1 --batch-size 8 --dropout 0.0 --attention-dropout 0.1 --weight-decay 0.001 --update-freq 4 --seed 1 --wandb-project DRFormer_ADMET --embed-dim 768 --ffn-embed-dim 768 --attention-heads 48 --max-update 1 --log-interval 100 --log-format simple --save-interval 2 --validate-interval-updates 1 --keep-interval-updates 20 --save-dir ./checkpoints/ADMET_eval --layers 12 --blocks 4 --required-batch-size-multiple 1 --node-loss-weight 1 --use-fit-sphere --use-shift-proj --edge-loss-weight 1 --sphere-pass-origin --use-unnormed-node-label --noisy-nodes --noisy-nodes-rate 1.0 --noise-scale 0.2 --noise-type normal --noise-in-traj --noisy-node-weight 1 --SAA-idx 0 --explicit-pos --pos-update-freq 6 --drop-or-add --cls-weight 1 --deform-tail --mix-reg-cls --neg-inf-before-softmax --readout-attention --moe 8 --task-dict-dir ./meta_dict_pretrain.json --moe-in-backbone --ddp-backend legacy_ddp --drop-tail --task-type-num 90 --use-meta --data-balance 0.2 --restore-file [your/directory/to/our/pretrained/model]/checkpoint_OmniMol_ADMET.pt --reset-dataloader --reset-lr-scheduler --reset-optimizer --reset-meters --distributed-world-size 1 --device-id 0
 ```
 
-Upon completion, the evaluation results will be saved in the file `./checkpoints/ADMET_eval/record/cls_task_step1_epoch1.csv`. The expected performance metrics for this example dataset are a ROC-AUC of `0.924` and an accuracy of `0.857`.
+The evaluation process typically takes no more than 5 minutes on a server equipped with a V100 GPU. Upon completion, the evaluation results will be saved in the file `./checkpoints/ADMET_eval/record/cls_task_step1_epoch1.csv`. The expected performance metrics for this example dataset are a ROC-AUC of `0.924` and an accuracy of `0.857`.
 
 ## Finetuning
 If further finetuning for better ADMET prediction performance is needed for better performance, please refer to `ADMET_FT_cls.sh` and `ADMET_FT_reg.sh` for specific scripts designed for finetuning the model. Make sure to adjust the scripts accordingly to fit your dataset directory and training requirements.
@@ -127,6 +132,6 @@ bash ADMET_FT_reg.sh
 
 These scripts assume you have pre-defined settings and configurations suitable for your specific ADMET prediction tasks. Adjust the parameters such as learning rate, batch size, and number of epochs according to your dataset characteristics and computational resources.
 
-###  Computational Resources
+##  Computational Resources
 The pretraining of our model on the full combination of all ADMET datasets was performed on 4 NVIDIA A100-80GB GPUs for approximately 90 hours.
 Finetuning on specific ADMET datasets typically takes around 3 hours on a single NVIDIA A100-80GB GPU.

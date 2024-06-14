@@ -1,4 +1,4 @@
-# packages in environment at /home/nbower0707/research/env/DRLabel_ADMET:
+# packages in environment at /home/nbower0707/research/env/OmniMol:
 #
 # Name                    Version                   Build  Channel
 _libgcc_mutex             0.1                 conda_forge    https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge
