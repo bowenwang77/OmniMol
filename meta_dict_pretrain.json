@@ -1,0 +1,613 @@
+{
+    "Ames": {
+        "regression": false,
+        "task_idx": 0,
+        "cls_num": 2,
+        "task_mean": 0.5617666232073012,
+        "task_std": 1,
+        "prop":"Toxicity",
+		"prop_id":5
+    },
+    "BACE": {
+        "regression": false,
+        "task_idx": 1,
+        "cls_num": 2,
+        "task_mean": 0.4256198347107438,
+        "task_std": 1
+    },
+    "BBB": {
+        "regression": false,
+        "task_idx": 2,
+        "cls_num": 2,
+        "task_mean": 0.5684165232358004,
+        "task_std": 1
+    },
+    "BBBP": {
+        "regression": false,
+        "task_idx": 3,
+        "cls_num": 2,
+        "task_mean": 0.8221949724095647,
+        "task_std": 1,
+        "prop":"Distribution",
+		"prop_id":2
+    },
+    "BCF": {
+        "regression": true,
+        "task_idx": 4,
+        "cls_num": 1,
+        "task_mean": 1.8217003734203703,
+        "task_std": 1.3683905701435817,
+        "prop":"Toxicity",
+		"prop_id":5
+    },
+    "CL": {
+        "regression": false,
+        "task_idx": 5,
+        "cls_num": 27,
+        "task_mean": 0,
+        "task_std": 1,
+        "prop":"Excretion",
+		"prop_id":4
+    },
+    "CYP1A2-inh": {
+        "regression": false,
+        "task_idx": 6,
+        "cls_num": 2,
+        "task_mean": 0.46430334748691615,
+        "task_std": 1,
+        "prop":"Metabolism",
+		"prop_id":3
+    },
+    "CYP1A2-sub": {
+        "regression": false,
+        "task_idx": 7,
+        "cls_num": 2,
+        "task_mean": 0.47474747474747475,
+        "task_std": 1,
+        "prop":"Metabolism",
+		"prop_id":3
+    },
+    "CYP2C19-inh": {
+        "regression": false,
+        "task_idx": 8,
+        "cls_num": 2,
+        "task_mean": 0.4550738916256158,
+        "task_std": 1,
+        "prop":"Metabolism",
+		"prop_id":3
+    },
+    "CYP2C19-sub": {
+        "regression": false,
+        "task_idx": 9,
+        "cls_num": 2,
+        "task_mean": 0.40865384615384615,
+        "task_std": 1,
+        "prop":"Metabolism",
+		"prop_id":3
+    },
+    "CYP2C9-inh": {
+        "regression": false,
+        "task_idx": 10,
+        "cls_num": 2,
+        "task_mean": 0.33106716110424395,
+        "task_std": 1,
+        "prop":"Metabolism",
+		"prop_id":3
+    },
+    "CYP2C9-sub": {
+        "regression": false,
+        "task_idx": 11,
+        "cls_num": 2,
+        "task_mean": 0.4009146341463415,
+        "task_std": 1,
+        "prop":"Metabolism",
+		"prop_id":3
+    },
+    "CYP2D6-inh": {
+        "regression": false,
+        "task_idx": 12,
+        "cls_num": 2,
+        "task_mean": 0.19372623574144487,
+        "task_std": 1,
+        "prop":"Metabolism",
+		"prop_id":3
+    },
+    "CYP2D6-sub": {
+        "regression": false,
+        "task_idx": 13,
+        "cls_num": 2,
+        "task_mean": 0.4943502824858757,
+        "task_std": 1,
+        "prop":"Metabolism",
+		"prop_id":3
+    },
+    "CYP3A4-inh": {
+        "regression": false,
+        "task_idx": 14,
+        "cls_num": 2,
+        "task_mean": 0.4113260781942765,
+        "task_std": 1,
+        "prop":"Metabolism",
+		"prop_id":3
+    },
+    "CYP3A4-sub": {
+        "regression": false,
+        "task_idx": 15,
+        "cls_num": 2,
+        "task_mean": 0.5037220843672456,
+        "task_std": 1,
+        "prop":"Metabolism",
+		"prop_id":3
+    },
+    "Caco-2": {
+        "regression": true,
+        "task_idx": 16,
+        "cls_num": 1,
+        "task_mean": -5.162095790828092,
+        "task_std": 0.8477055011703721,
+        "prop":"Absorption",
+		"prop_id":1
+    },
+    "Carcinogenicity": {
+        "regression": false,
+        "task_idx": 17,
+        "cls_num": 2,
+        "task_mean": 0.4957983193277311,
+        "task_std": 1,
+        "prop":"Toxicity",
+		"prop_id":5
+    },
+    "DILI": {
+        "regression": false,
+        "task_idx": 18,
+        "cls_num": 2,
+        "task_mean": 0.4986737400530504,
+        "task_std": 1,
+        "prop":"Toxicity",
+		"prop_id":5
+    },
+    "EC": {
+        "regression": false,
+        "task_idx": 19,
+        "cls_num": 2,
+        "task_mean": 0.3857453754080522,
+        "task_std": 1,
+        "prop":"Toxicity",
+		"prop_id":5
+    },
+    "EI": {
+        "regression": false,
+        "task_idx": 20,
+        "cls_num": 2,
+        "task_mean": 0.7420977011494253,
+        "task_std": 1,
+        "prop":"Toxicity",
+		"prop_id":5
+    },
+    "F(20%)": {
+        "regression": false,
+        "task_idx": 21,
+        "cls_num": 2,
+        "task_mean": 0.7487623762376238,
+        "task_std": 1,
+        "prop":"Absorption",
+		"prop_id":1
+    },
+    "F(30%)": {
+        "regression": false,
+        "task_idx": 22,
+        "cls_num": 2,
+        "task_mean": 0.6621287128712872,
+        "task_std": 1,
+        "prop":"Absorption",
+		"prop_id":1
+    },
+    "FDAMDD": {
+        "regression": false,
+        "task_idx": 23,
+        "cls_num": 2,
+        "task_mean": 0.4732510288065844,
+        "task_std": 1,
+        "prop":"Toxicity",
+		"prop_id":5
+    },
+    "Fu": {
+        "regression": true,
+        "task_idx": 24,
+        "cls_num": 1,
+        "task_mean": 1.1613957031829094,
+        "task_std": 0.7206026010935632,
+        "prop":"Distribution",
+		"prop_id":2
+    },
+    "H-HT": {
+        "regression": false,
+        "task_idx": 25,
+        "cls_num": 2,
+        "task_mean": 0.5730688935281837,
+        "task_std": 1,
+        "prop":"Toxicity",
+		"prop_id":5
+    },
+    "HIA": {
+        "regression": false,
+        "task_idx": 26,
+        "cls_num": 2,
+        "task_mean": 0.874468085106383,
+        "task_std": 1,
+        "prop":"Absorption",
+		"prop_id":1
+    },
+    "IGC50": {
+        "regression": true,
+        "task_idx": 27,
+        "cls_num": 1,
+        "task_mean": 3.2651595517214838,
+        "task_std": 1.0749964451928764,
+        "prop":"Toxicity",
+		"prop_id":5
+    },
+    "LC50": {
+        "regression": true,
+        "task_idx": 28,
+        "cls_num": 1,
+        "task_mean": 4.0083297577944785,
+        "task_std": 1.474639758296461,
+        "prop":"Toxicity",
+		"prop_id":5
+    },
+    "LC50DM": {
+        "regression": true,
+        "task_idx": 29,
+        "cls_num": 1,
+        "task_mean": 4.783332132454873,
+        "task_std": 1.7842996837746643,
+        "prop":"Toxicity",
+		"prop_id":5
+    },
+    "LogD": {
+        "regression": true,
+        "task_idx": 30,
+        "cls_num": 1,
+        "task_mean": 2.2491332531602413,
+        "task_std": 1.3679787786837048,
+        "prop":"Physiochemical",
+		"prop_id":6
+    },
+    "LogP": {
+        "regression": true,
+        "task_idx": 31,
+        "cls_num": 1,
+        "task_mean": 2.012222332316758,
+        "task_std": 1.8320405254131578,
+        "prop":"Physiochemical",
+		"prop_id":6
+    },
+    "LogS": {
+        "regression": true,
+        "task_idx": 32,
+        "cls_num": 1,
+        "task_mean": -2.6844237001033857,
+        "task_std": 2.179599626477677,
+        "prop":"Physiochemical",
+		"prop_id":6
+    },
+    "MDCK": {
+        "regression": true,
+        "task_idx": 33,
+        "cls_num": 1,
+        "task_mean": -4.793275829605264,
+        "task_std": 0.5456166106265385,
+        "prop":"Absorption",
+		"prop_id":1
+    },
+    "NR-AR-LBD": {
+        "regression": false,
+        "task_idx": 34,
+        "cls_num": 2,
+        "task_mean": 0.033555836189788926,
+        "task_std": 1,
+        "prop":"Toxicity",
+		"prop_id":5
+    },
+    "NR-AR": {
+        "regression": false,
+        "task_idx": 35,
+        "cls_num": 2,
+        "task_mean": 0.03619756427604871,
+        "task_std": 1,
+        "prop":"Toxicity",
+		"prop_id":5
+    },
+    "NR-AhR": {
+        "regression": false,
+        "task_idx": 36,
+        "cls_num": 2,
+        "task_mean": 0.11452095808383234,
+        "task_std": 1,
+        "prop":"Toxicity",
+		"prop_id":5
+    },
+    "NR-Aromatase": {
+        "regression": false,
+        "task_idx": 37,
+        "cls_num": 2,
+        "task_mean": 0.0438983406847301,
+        "task_std": 1,
+        "prop":"Toxicity",
+		"prop_id":5
+    },
+    "NR-ER-LBD": {
+        "regression": false,
+        "task_idx": 38,
+        "cls_num": 2,
+        "task_mean": 0.048771929824561404,
+        "task_std": 1,
+        "prop":"Toxicity",
+		"prop_id":5
+    },
+    "NR-ER": {
+        "regression": false,
+        "task_idx": 39,
+        "cls_num": 2,
+        "task_mean": 0.10829817158931083,
+        "task_std": 1,
+        "prop":"Toxicity",
+		"prop_id":5
+    },
+    "NR-PPAR-gamma": {
+        "regression": false,
+        "task_idx": 40,
+        "cls_num": 2,
+        "task_mean": 0.030456852791878174,
+        "task_std": 1,
+        "prop":"Toxicity",
+		"prop_id":5
+    },
+    "PPB": {
+        "regression": true,
+        "task_idx": 41,
+        "cls_num": 1,
+        "task_mean": 78.86825740062659,
+        "task_std": 27.62847111502372,
+        "prop":"Distribution",
+		"prop_id":2
+    },
+    "Pgp-inh": {
+        "regression": false,
+        "task_idx": 42,
+        "cls_num": 2,
+        "task_mean": 0.5992239467849224,
+        "task_std": 1,
+        "prop":"Absorption",
+		"prop_id":1
+    },
+    "Pgp-sub": {
+        "regression": false,
+        "task_idx": 43,
+        "cls_num": 2,
+        "task_mean": 0.5140280561122245,
+        "task_std": 1,
+        "prop":"Absorption",
+		"prop_id":1
+    },
+    "ROA": {
+        "regression": false,
+        "task_idx": 44,
+        "cls_num": 2,
+        "task_mean": 0.3818522301668369,
+        "task_std": 1,
+        "prop":"Toxicity",
+		"prop_id":5
+    },
+    "Respiratory": {
+        "regression": false,
+        "task_idx": 45,
+        "cls_num": 2,
+        "task_mean": 0.6032171581769437,
+        "task_std": 1,
+        "prop":"Toxicity",
+		"prop_id":5
+    },
+    "SR-ARE": {
+        "regression": false,
+        "task_idx": 46,
+        "cls_num": 2,
+        "task_mean": 0.15332009706596073,
+        "task_std": 1,
+        "prop":"Toxicity",
+		"prop_id":5
+    },
+    "SR-ATAD5": {
+        "regression": false,
+        "task_idx": 47,
+        "cls_num": 2,
+        "task_mean": 0.034887737478411056,
+        "task_std": 1,
+        "prop":"Toxicity",
+		"prop_id":5
+    },
+    "SR-HSE": {
+        "regression": false,
+        "task_idx": 48,
+        "cls_num": 2,
+        "task_mean": 0.05702446724546172,
+        "task_std": 1,
+        "prop":"Toxicity",
+		"prop_id":5
+    },
+    "SR-MMP": {
+        "regression": false,
+        "task_idx": 49,
+        "cls_num": 2,
+        "task_mean": 0.15204678362573099,
+        "task_std": 1,
+        "prop":"Toxicity",
+		"prop_id":5
+    },
+    "SR-p53": {
+        "regression": false,
+        "task_idx": 50,
+        "cls_num": 2,
+        "task_mean": 0.06701030927835051,
+        "task_std": 1,
+        "prop":"Toxicity",
+		"prop_id":5
+    },
+    "SkinSen": {
+        "regression": false,
+        "task_idx": 51,
+        "cls_num": 2,
+        "task_mean": 0.6759259259259259,
+        "task_std": 1,
+        "prop":"Toxicity",
+		"prop_id":5
+    },
+    "T12": {
+        "regression": false,
+        "task_idx": 52,
+        "cls_num": 2,
+        "task_mean": 0.40580985915492956,
+        "task_std": 1,
+        "prop":"Excretion",
+		"prop_id":4
+    },
+    "VDss": {
+        "regression": true,
+        "task_idx": 53,
+        "cls_num": 1,
+        "task_mean": 1.2002198666651789,
+        "task_std": 1.518580351497547,
+        "prop":"Distribution",
+		"prop_id":2
+    },
+    "hERG": {
+        "regression": false,
+        "task_idx": 54,
+        "cls_num": 2,
+        "task_mean": 0.5,
+        "task_std": 1,
+        "prop":"Toxicity",
+		"prop_id":5
+    },
+    "OCP_OC20": {
+        "regression": true,
+        "task_idx": 55,
+        "cls_num": 1,
+        "task_mean": 5.6823,
+        "task_std": 1.1575,
+        "task_geo_mean": [
+            0.0,
+            0.0,
+            0.0
+        ],
+        "task_geo_std": [
+            0.4146,
+            0.5808,
+            0.616
+        ],
+        "task_geo_mean_no_node_mask": [
+            0,
+            0,
+            0
+        ],
+        "task_geo_std_no_node_mask": [
+            0.4146,
+            0.5808,
+            0.616
+        ]
+    },
+    "OCP_SAA": {
+        "regression": true,
+        "task_idx": 56,
+        "cls_num": 1,
+        "task_mean": [
+            0.0004942604560615526,
+            -0.0005131019598567265,
+            -0.00027903440314200144,
+            4.4547749339766987e-05,
+            0.0005522250003931309
+        ],
+        "task_std": [
+            0.063296254401394,
+            0.081638486654743,
+            0.08989569506388811,
+            0.09048603318416805,
+            0.09049358739628735
+        ]
+    },
+    "pcq": {
+        "regression": true,
+        "task_idx": 57,
+        "cls_num": 1,
+        "task_mean": 5.6823,
+        "task_std": 1.1575,
+        "task_geo_mean": [
+            0.0,
+            0.0,
+            0.0
+        ],
+        "task_geo_std": [
+            0.4146,
+            0.5808,
+            0.616
+        ],
+        "task_geo_mean_no_node_mask": [
+            0,
+            0,
+            0
+        ],
+        "task_geo_std_no_node_mask": [
+            0.4146,
+            0.5808,
+            0.616
+        ]
+    },
+    "RS_label_binary": {
+        "regression": false,
+        "task_idx": 58,
+        "cls_num": 2,
+        "task_mean": 0.5,
+        "task_std": 1
+    },
+    "chiral_cliff_cls": {
+        "regression": false,
+        "task_idx": 59,
+        "cls_num": 2,
+        "task_mean": 0.4697793412216182,
+        "task_std": 1
+    },
+    "rotation_strength": {
+        "regression": true,
+        "task_idx": 60,
+        "cls_num": 1,
+        "task_mean": [
+            0.0004942604560615526,
+            -0.0005131019598567265,
+            -0.00027903440314200144,
+            4.4547749339766987e-05,
+            0.0005522250003931309
+        ],
+        "task_std": [
+            0.063296254401394,
+            0.081638486654743,
+            0.08989569506388811,
+            0.09048603318416805,
+            0.09049358739628735
+        ]
+    },
+    "prop1": {
+        "regression": false,
+        "task_idx": 61,
+        "cls_num": 2,
+        "task_mean": 0.125,
+        "task_std": 1.0
+    },
+    "prop2": {
+        "regression": true,
+        "task_idx": 62,
+        "cls_num": 1,
+        "task_mean": 0.3,
+        "task_std": 0.3964124835860459
+    }
+}
