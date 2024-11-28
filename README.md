@@ -19,7 +19,7 @@ Set up the conda environment by following the detailed instructions provided on 
 ### Compressed Conda Environment
 Alternatively, a more efficient way is to download a pre-configured conda environment using the link below (password: OmniMol2024):
 
-[Download Environment](https://mycuhk-my.sharepoint.com/:u:/g/personal/1155156871_link_cuhk_edu_hk/Eaj5wfpTb_JFsFB-t6BsyXgBIu1pA84aUDVVzA0Tv0k62Q?e=nHeZeu)
+[Download Environment](https://mycuhk-my.sharepoint.com/:u:/g/personal/1155156871_link_cuhk_edu_hk/Eefv8KiXtZpCjInMgzSTzMUBPzj4bTv9Uaedhsnx7bfLCg?e=bvZF23)
 
 After downloading, use the following commands to set up the environment:
 ```bash
