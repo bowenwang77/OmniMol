@@ -1,0 +1,63 @@
+cff-version: 1.1.0
+message: "If you use this software, please cite it using the metadata below. For the scientific context and findings, please also cite the accompanying research paper."
+
+# Citation information
+authors:
+  - family-names: "Wang"
+    given-names: "Bowen"
+    email: "bowenwang@link.cuhk.edu.hk"
+    orcid: "https://orcid.org/0000-0002-5245-4683"
+
+title: "Unified and Explainable Molecular Representation Learning for Imperfectly Annotated Data from the Hypergraph View"
+version: v0.1.1
+doi: 10.5281/zenodo.15872955
+date-released: 2025-07-13
+repository-code: "https://github.com/bowenwang77/OmniMol"
+
+# Link to the research paper
+references:
+  - type: article
+    title: "Unified and Explainable Molecular Representation Learning for Imperfectly Annotated Data from the Hypergraph View"
+    authors:
+      - family-names: "Wang"
+        given-names: "Bowen"
+        email: "bowenwang@link.cuhk.edu.hk"
+      - family-names: "Li"
+        given-names: "Junyou"
+        email: "lijunyou@zhejianglab.com"
+      - family-names: "Zhou"
+        given-names: "Donghao"
+        email: "dhzhou.link@gmail.com"
+      - family-names: "Li"
+        given-names: "Lanqing"
+        email: "lanqingli1993@gmail.com"
+      - family-names: "Li"
+        given-names: "Jinpeng"
+        email: "ljpadam@gmail.com"
+      - family-names: "Wang"
+        given-names: "Ercheng"
+        email: "wangec@zhejianglab.com"
+      - family-names: "Hao"
+        given-names: "Jianye"
+        email: "jianye.hao@tju.edu.cn"
+      - family-names: "Shi"
+        given-names: "Liang"
+        email: "lshi4@ucmerced.edu"
+      - family-names: "Lu"
+        given-names: "Chengqiang"
+        email: "lunar@mail.ustc.edu.cn"
+      - family-names: "Qiu"
+        given-names: "Jiezhong"
+        email: "jiezhongqiu@zhejianglab.com"
+      - family-names: "Hou"
+        given-names: "Tingjun"
+        email: "tingjunhou@zju.edu.cn"
+      - family-names: "Cao"
+        given-names: "Dongsheng"
+        email: "oriental-cds@163.com"
+      - family-names: "Chen"
+        given-names: "Guangyong"
+        email: "gychen@link.cuhk.edu.hk"
+      - family-names: "Heng"
+        given-names: "Pheng Ann"
+        email: "pheng@cse.cuhk.edu.hk"
